@@ -1,0 +1,48 @@
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 10px 740px 10px 1fr 1fr;
+}
+
+article > * {
+    grid-column: 4;
+}
+
+article > figure {
+    grid-column: 1 / -1;
+    margin: 20px 0;
+}
+
+.highlight {
+    font-style: italic;
+    cursor: pointer;
+    background-color: rgba(119, 219, 131, 0.3);
+}
+
+.highlight:hover {
+    background-color: rgba(119, 219, 131, 0.9);
+}
+
+article > .aside {
+    font-family: 'Lucida Grande';
+    margin: 30px 20px;
+    color: #666;
+    font-size: 0.8em;
+    grid-column: 5 / -1;
+    font-style: italic;
+    cursor: pointer;
+}
+
+article > blockquote {
+    grid-column: 3 / span 2;
+    margin: 0px 0;
+    color: #666;
+    border-left: 3px solid black;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+figure figcaption {
+    color: #666;
+    font-style: italic;
+    font-size: 0.8em;
+}
