@@ -1,15 +1,106 @@
+html {
+    font-family: 'Lucida Grande';
+}
+nav {
+    background: #fffee8;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    font-family: 'Lucida Grande';
+    position: fixed;
+    box-shadow: 0px 0px 15px #dfdfdf;
+}
+a {
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.upperNav {
+    background: white;
+    padding: 15px;
+}
+.upperNav .medium {
+    margin-left: 60px;
+}
+input {
+    float: right;
+    margin: 10px;
+}
+/* .signin {
+    float: right;
+    margin: 10px;
+} */
+
+.logo a {
+    margin: 0 70px;
+    width: 120px;
+}
+nav ul {
+    margin: 0;
+    padding: 4px;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    border: 1px #ccc solid;
+}
+nav li {
+    margin-right: 30px;
+}
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right: 30px;
+}
+.separator {
+    margin-left: -40px;
+    /* margin-right: -20px; */
+}
+@media screen and (max-width: 767px) {
+    li {
+        visibility: hidden;
+    }
+    .logo {
+        visibility: visible;
+    }
+}
+
 article {
     display: grid;
     grid-template-columns: 1fr 1fr 10px 740px 10px 1fr 1fr;
-}
+    margin-top: 120px;
 
+}
 article > * {
     grid-column: 4;
 }
-
 article > figure {
     grid-column: 1 / -1;
     margin: 20px 0;
+}
+article h1 {
+    font-family: 'Palatino', serif;
+    font-weight: 400;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+article h2 {
+    font-family: 'Palatino', serif;
+    font-weight: 400;
+    color: #777;
+    font-size: 20px;
+    padding: 0;
+}
+.author {
+    font-size: 10px;
+    color: #444;
+    margin: 30px 0;
 }
 
 .highlight {

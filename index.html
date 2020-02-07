@@ -3,14 +3,33 @@
   <title>Medium Layout Copy</title>
 <!--    https://medium.freecodecamp.org/how-to-recreate-mediums-article-layout-with-css-grid-b4608792bad1 -->
   <meta name="author" content="dokinqs">
-  <base target="_blank">
+  <!-- <base target="_blank"> -->
   <link rel="stylesheet" href="basic.css">
   <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
+
+  <nav id="navbar">
+    <div class="upperNav">
+      <a href="#" class="medium" rel="noopener">M</a>
+      <input placeholder="Search" />
+      <!-- <div class="signin">Sign In</div> -->
+    </div>
+    <ul>
+        <li class="logo"><a href="#blog" class="logotext" rel="noopener">🖥️ BLAHG</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#popular">POPULAR</a></li>
+        <li><a href="#new">NEW</a></li>
+        <li><a class="separator">|</a></li>
+        <li><a class="newsletter" href="#newsletter">NEWSLETTER</a></li>
+    </ul>
+  </nav>
+
 <article>
 <h1>NPM Package in Browser Locally</h1>
+<h2>Node Package Manager headaches 24/7</h2>
+<span class="author">Britishguy Sillyname</span>
 <p>JavaScript has never had any official solution for distributing packages, 
 and every web platform (Rails, Django) has different structuring and packaging. 
 NPM the canonical way of distribution, Webpack as build system, 
