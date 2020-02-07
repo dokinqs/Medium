@@ -1,7 +1,4 @@
-# Medium
-Layout Clone
-
-CSS Grid
+# Medium Layout Clone with CSS Grid
 
 [Demo](https://dokinqs.github.io/Medium/)
 
