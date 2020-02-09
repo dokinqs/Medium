@@ -1,22 +1,25 @@
 html {
-    font-family: 'Lucida Grande';
+    font-family: 'Lucida Grande', serif;
 }
 nav {
-    background: #fffee8;
+    background: rgba(119, 219, 131);
     top: 0;
     width: 100%;
     z-index: 1;
     font-family: 'Lucida Grande';
     position: fixed;
-    box-shadow: 0px 0px 15px #dfdfdf;
+    box-shadow: 0px 0px 15px #c6c6c6;
 }
 a {
     text-decoration: none;
     padding: 10px;
     display: inline-block;
-    color: #555;
+    color: #d0d0d0;
     text-transform: uppercase;
     font-size: 14px;
+}
+a:hover {
+    color: black;
 }
 .upperNav {
     background: white;
@@ -29,10 +32,19 @@ input {
     float: right;
     margin: 10px;
 }
-/* .signin {
+.signin, .getstarted {
     float: right;
     margin: 10px;
-} */
+    color: #329f10;
+    font-size: 8px;
+    font-family: 'Lucida Grande';
+}
+.getstarted {
+    padding: 6px 16px;
+    border: 1px solid #329f10;
+    border-radius: 3px;
+    margin-top: 4px;
+}
 
 .logo a {
     margin: 0 70px;
@@ -44,7 +56,7 @@ nav ul {
     list-style: none;
     display: flex;
     align-items: flex-start;
-    border: 1px #ccc solid;
+    border-top: 1px #ccc solid;
 }
 nav li {
     margin-right: 30px;
@@ -59,8 +71,12 @@ nav a {
     margin-right: 30px;
 }
 .separator {
+    margin-top: 7px;
+    width: 1px;
+    height: 28px;
+    background: rgba(0, 0, 0, 0.5);
     margin-left: -40px;
-    /* margin-right: -20px; */
+    margin-right: 20px;
 }
 @media screen and (max-width: 767px) {
     li {
@@ -97,10 +113,39 @@ article h2 {
     font-size: 20px;
     padding: 0;
 }
+.authorbox {
+    font-size: 8px;
+}
+.authorbox img {
+    height: 40px;
+    width: 40px;
+    float: left;
+}
 .author {
-    font-size: 10px;
+    margin: 0;
+    padding: 0;
     color: #444;
-    margin: 30px 0;
+}
+button {
+    background: white;
+    border-radius: 4px;
+    font-family: 'Lucida Grande';
+    font-size: 6px;
+}
+.authorbox {
+    float: left;
+}
+.authorbox span {
+    color: #828282;
+}
+.icons {
+    float: right;
+}
+.icons a {
+    padding: 0;
+}
+.authorIconsContainer {
+    margin-bottom: 40px;
 }
 
 .highlight {

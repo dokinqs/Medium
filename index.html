@@ -6,6 +6,7 @@
   <!-- <base target="_blank"> -->
   <link rel="stylesheet" href="basic.css">
   <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -13,15 +14,16 @@
   <nav id="navbar">
     <div class="upperNav">
       <a href="#" class="medium" rel="noopener">M</a>
+      <span class="getstarted">Get Started</span>
+      <span class="signin">Sign In</span>
       <input placeholder="Search" />
-      <!-- <div class="signin">Sign In</div> -->
     </div>
     <ul>
         <li class="logo"><a href="#blog" class="logotext" rel="noopener">🖥️ BLAHG</a></li>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#popular">POPULAR</a></li>
         <li><a href="#new">NEW</a></li>
-        <li><a class="separator">|</a></li>
+        <span class="separator"></span>
         <li><a class="newsletter" href="#newsletter">NEWSLETTER</a></li>
     </ul>
   </nav>
@@ -29,7 +31,26 @@
 <article>
 <h1>NPM Package in Browser Locally</h1>
 <h2>Node Package Manager headaches 24/7</h2>
-<span class="author">Britishguy Sillyname</span>
+
+<div class="authorIconsContainer">
+  <div class="authorbox">
+    <img src="https://img.icons8.com/cotton/2x/person-male.png"/>
+    <span class="author">Britishguy Sillyname <button>Follow</button></span>
+    <div><span>Feb 14, 2019  ·  100 min read</span></div>
+  </div>
+  <div class="icons">
+    <a href="https://www.twitter.com"><svg width="29" height="29" class="twitter">
+      <path d="M22.05 7.54a4.47 4.47 0 0 0-3.3-1.46 4.53 4.53 0 0 0-4.53 4.53c0 .35.04.7.08 1.05A12.9 12.9 0 0 1 5 6.89a5.1 5.1 0 0 0-.65 2.26c.03 1.6.83 2.99 2.02 3.79a4.3 4.3 0 0 1-2.02-.57v.08a4.55 4.55 0 0 0 3.63 4.44c-.4.08-.8.13-1.21.16l-.81-.08a4.54 4.54 0 0 0 4.2 3.15 9.56 9.56 0 0 1-5.66 1.94l-1.05-.08c2 1.27 4.38 2.02 6.94 2.02 8.3 0 12.86-6.9 12.84-12.85.02-.24 0-.43 0-.65a8.68 8.68 0 0 0 2.26-2.34c-.82.38-1.7.62-2.6.72a4.37 4.37 0 0 0 1.95-2.51c-.84.53-1.81.9-2.83 1.13z"></path>
+    </svg></a>
+    <a href="https://www.facebook.com"><svg width="29" height="29">
+      <path d="M23.2 5H5.8a.8.8 0 0 0-.8.8V23.2c0 .44.35.8.8.8h9.3v-7.13h-2.38V13.9h2.38v-2.38c0-2.45 1.55-3.66 3.74-3.66 1.05 0 1.95.08 2.2.11v2.57h-1.5c-1.2 0-1.48.57-1.48 1.4v1.96h2.97l-.6 2.97h-2.37l.05 7.12h5.1a.8.8 0 0 0 .79-.8V5.8a.8.8 0 0 0-.8-.79"></path>
+    </svg></a>
+    <a href="https://www.bookmark.com"><svg width="25" height="25" viewBox="0 0 25 25">
+      <path d="M19 6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14.66h.01c.01.1.05.2.12.28a.5.5 0 0 0 .7.03l5.67-4.12 5.66 4.13a.5.5 0 0 0 .71-.03.5.5 0 0 0 .12-.29H19V6zm-6.84 9.97L7 19.64V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v13.64l-5.16-3.67a.49.49 0 0 0-.68 0z" fill-rule="evenodd"></path>
+    </svg></a>
+  </div>
+</div>
+
 <p>JavaScript has never had any official solution for distributing packages, 
 and every web platform (Rails, Django) has different structuring and packaging. 
 NPM the canonical way of distribution, Webpack as build system, 
@@ -230,5 +251,26 @@ Clearly defined what the module system needs to function. Cache this in the most
 A sign that it hasn’t been designed for our use case.</p>
 
 </article>
+
+<script>
+$(window).scroll(
+  // anonymous JS object to store the value
+    {
+        previousTop: 0
+    }, 
+    () => {
+      let currentTop = $(window).scrollTop();
+      if (currentTop < this.previousTop) {
+        // scrolled up
+          $("#navbar").show();
+          // $("#navbar").slideUp(300);
+      } else {
+        // scrolled down
+          $("#navbar").hide();
+          // $("#navbar").slideDown(300);
+      }
+      this.previousTop = currentTop;
+});
+</script>
 </body>
 </html>
