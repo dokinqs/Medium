@@ -41,6 +41,10 @@ img {
     padding-right: 1em;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 code {
     background: #eee;
     padding: 2px 5px;
