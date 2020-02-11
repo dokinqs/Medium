@@ -250,6 +250,60 @@ figure figcaption {
     width: 740px;
     margin: 30px auto;
 }
+.endsocials .like {
+    font-size: 24px;
+    background: none;
+    padding: 10px;
+    padding-left: 14px;
+    padding-bottom: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 220, 126, 0.9);
+    width: 60px;
+    /* transition: likeanim 150ms ease; */
+}
+.endsocials .like::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    z-index: 0;
+    height: 100%;
+    /* transition: likeanim 150ms ease; */
+}
+.endsocials .like:hover {
+    animation-name: likeanim; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: ease-in;
+    border-color: rgba(255, 220, 126, 0.54);
+} 
+.like:focus {
+    outline: 0;
+    background: rgba(255, 220, 126, 0.4);
+}
+@keyframes likeanim {
+    0% { 
+        transform: scale(1); 
+        box-shadow: 0 0 2px #ffdc7e; 
+        opacity: 1;
+    }
+    50% { 
+        transform: scale(1); 
+        box-shadow: 0 0 22px #ffdc7e, inset 0 0 2px #ffdc7e; 
+        opacity: 1;
+    }
+    70% { 
+        transform: scale(1); 
+        box-shadow: 0 0 22px white, inset 0 0 2px white; 
+        opacity: 1;
+    }
+}
+
+.likes {
+    border: none;
+    margin: 10px;
+}
 
 .authorbox-bottom {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -287,7 +341,7 @@ figure figcaption {
 }
 
 
-/* MODAL */
+/* FOLLOW MODAL */
 
 .modal {
     display: none; /* Hidden by default */
@@ -372,6 +426,48 @@ figure figcaption {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+/* LIKES MODAL */
+
+#likesModal {
+    display: none;
+    background-color: rgba(256, 256, 256, 0.9);  
+}
+#likesModal .modal-content {
+    background-color: rgba(256, 256, 256, 0.2);
+    border: 0;
+    width: 70%;
+    min-height: 1400px;
+    box-shadow: none;
+}
+
+#likesModal .modal-header {
+    font-size: 20px;
+}
+
+#likesModal .modal-body {
+    display: block;
+}
+#likesModal .modal-body div {
+    height: 50px;
+    margin: 10px;
+}
+#likesModal .author img {
+    height: 40px;
+    width: 40px;
+    float: left;
+}
+#likesModal .author a {
+    float: left;
+    font-weight: 700;
+}
+#likesModal .author button {
+    float: right;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 10px;
 }
 
 
