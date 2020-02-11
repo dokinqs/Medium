@@ -246,7 +246,6 @@ figure figcaption {
     color: rgba(0, 0, 0, 0.54);
 }
 
-
 .endsocials {
     width: 740px;
     margin: 30px auto;
@@ -255,7 +254,9 @@ figure figcaption {
 .authorbox-bottom {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 32px;
+    padding-bottom: 32px;
     margin-top: 25px;
+    margin-bottom: 25px;
 }
 .authorbox-bottom img {
     height: 80px;
@@ -269,6 +270,22 @@ figure figcaption {
 .authorbox-bottom span {
     color: #828282;
 }
+
+.comments {
+    padding-top: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.comments button {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    background: none;
+    padding: 24px;
+    color: #329f10;
+    border-color: #329f10;
+    border-radius: 4px;
+}
+
 
 /* MODAL */
 
