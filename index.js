@@ -4,7 +4,7 @@ $(window).scroll(
         previousTop: 0
     }, 
     () => {
-      let currentTop = $(window).scrollTop();
+      let currentTop = $(window).scrollTop()+ 300;
       if (currentTop < this.previousTop) {
         // scrolled up
           $("#navbar").show();

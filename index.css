@@ -1,9 +1,11 @@
+/* NAV */
+
 nav {
     background: rgba(119, 219, 131);
     top: 0;
     width: 100%;
     z-index: 1;
-    font-family: 'Lucida Grande';
+    font-family: 'Lucida Grande', sans-serif;
     position: fixed;
     box-shadow: 0px 0px 15px #c6c6c6;
 }
@@ -12,7 +14,6 @@ a {
     padding: 10px;
     display: inline-block;
     color: #d0d0d0;
-    text-transform: uppercase;
     font-size: 14px;
 }
 a:hover {
@@ -21,6 +22,7 @@ a:hover {
 .upperNav {
     background: white;
     padding: 15px;
+    align-items: center;
 }
 #navbar .homelink, #navbar .companylink {
     margin-left: 60px;
@@ -32,16 +34,27 @@ input {
 }
 .signin, .getstarted {
     float: right;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     color: #329f10;
     font-size: 8px;
-    font-family: 'Lucida Grande';
+    font-family: 'Lucida Grande', sans-serif;
+}
+.signin {
+    margin-top: 8px;
+}
+.signin:hover {
+    color: #327a18;
 }
 .getstarted {
-    padding: 6px 16px;
+    padding: 10px 16px;
     border: 1px solid #329f10;
-    border-radius: 3px;
-    margin-top: 4px;
+    border-radius: 4px;
+    margin-top: 2px;
+}
+.getstarted:hover {
+    color: #327a18;
+    border-color: #327a18;
 }
 
 .lowerNav {
@@ -108,6 +121,8 @@ nav a {
 }
 
 
+/* ARTICLE */
+
 article {
     display: grid;
     grid-template-columns: 1fr 1fr 10px 740px 10px 1fr 1fr;
@@ -136,26 +151,34 @@ article h2 {
 }
 .authorbox {
     font-size: 8px;
+    float: left;
 }
 .authorbox img {
     height: 40px;
     width: 40px;
     float: left;
 }
-.author {
+.author a {
     margin: 0;
     padding: 0;
-    color: #444;
+    color: #333 !important;
 }
-button {
+.author a:hover {
+    text-decoration: underline;
+}
+.author button {
     background: white;
     border-radius: 4px;
-    font-family: 'Lucida Grande';
+    border-color: #333;
+    color: #333;
     font-size: 6px;
+    font-family: 'Lucida Grande', sans-serif;
+    padding: 0 8px;
 }
-.authorbox {
-    float: left;
+button:hover {
+    border-color: black;
 }
+
 .authorbox span {
     color: #828282;
 }
@@ -180,7 +203,7 @@ button {
 }
 
 article > .aside {
-    font-family: 'Lucida Grande';
+    font-family: 'Lucida Grande', sans-serif;
     margin: 30px 20px;
     color: #666;
     font-size: 0.8em;
@@ -205,13 +228,13 @@ figure figcaption {
 }
 
 
-/* Modal */
+/* MODAL */
 
 .modal {
     display: none; /* Hidden by default */
     position: fixed; 
     z-index: 1; 
-    padding-top: 100px; 
+    padding-top: 70px; 
     left: 0;
     top: 0;
     width: 100%;
@@ -228,8 +251,8 @@ figure figcaption {
     padding: 0;
     background-color: #fefefe;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    width: 80%;
-    height: 530px;
+    width: 70%;
+    height: 500px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.9s;
@@ -251,26 +274,26 @@ figure figcaption {
     }
 }
 .modal-header {
-    padding: 60px 16px 20px;
-}
-.modal-footer {
-    padding: 20px 16px 10px;
+    padding: 60px 4vw 10px;
 }
 .modal-content h2 {
     font-weight: 400;
-    padding: 0 5vw;
+    padding: 0 6vw;
 }
-.modal-content h4 {
+.modal-subheader p {
+    font-size: 12px;
     color: #777;
     font-weight: 400;
-    padding: 0 5vw;
+    padding: 0 14vw;
+    margin: 0 auto 20px;
 }
 .modal-body {
     padding: 5px 16px;
 }
 .modal-body button {
-    padding: 15px;
+    padding: 10px 20px;
     margin: 10px;
+    font-size: 12px;
     background-color: white;
     border-color: #bfbfbf;
 }
@@ -290,4 +313,33 @@ figure figcaption {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #181818;
+    padding: 16px;
+    height: 60px;
+}
+.footer .homelink {
+    float: left;
+}
+.footer img {
+    width: 46px;
+    height: 46px;
+    padding: 0;
+}
+.footertextlinks a {
+    font-size: 8px;
+    font-family: 'Lucida Grande', sans-serif;
+    float: right;
+    color: #bbb;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+.footertextlinks a:hover {
+    color: #bbb;
+    text-decoration: underline;
 }

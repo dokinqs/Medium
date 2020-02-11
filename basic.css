@@ -41,7 +41,7 @@ img {
     padding-right: 1em;
 }
 
-button:hover {
+a:hover, button:hover {
     cursor: pointer;
 }
 
