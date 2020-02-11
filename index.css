@@ -161,7 +161,7 @@ article h2 {
 .author a {
     margin: 0;
     padding: 0;
-    color: #333 !important;
+    color: #333;
 }
 .author a:hover {
     text-decoration: underline;
@@ -227,6 +227,48 @@ figure figcaption {
     font-size: 0.8em;
 }
 
+/* End of Article Author Info */
+
+.tags {
+    width: 740px;
+    margin: 0 auto;
+}
+.tags ul {
+    padding: 0;
+}
+.tags a {
+    line-height: 22px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.05);
+    font-size: 15px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+
+.endsocials {
+    width: 740px;
+    margin: 30px auto;
+}
+
+.authorbox-bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 32px;
+    margin-top: 25px;
+}
+.authorbox-bottom img {
+    height: 80px;
+    width: 80px;
+    float: left;
+}
+.authorbox-bottom .author a {
+    font-size: 24px;
+    font-weight: 700;
+}
+.authorbox-bottom span {
+    color: #828282;
+}
 
 /* MODAL */
 

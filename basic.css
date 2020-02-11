@@ -4,6 +4,10 @@ html, body {
     font-family: 'Lucida Grande', serif;
 }
 
+li {
+    display: inline;
+}
+
 article {
     line-height: 1.4;
 }
