@@ -264,7 +264,7 @@ figure img {
     width: 60px;
     /* transition: likeanim 150ms ease; */
 }
-.like::before {
+/* .like::before {
     display: block;
     position: absolute;
     content: "";
@@ -272,17 +272,13 @@ figure img {
     left: 0;
     border-radius: 50%;
     z-index: 1;
-}
+} */
 .like:hover {
-    animation-name: likeanim; 
+    animation-name: likehover; 
     animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: ease-in;
     border-color: rgba(255, 220, 126, 0.54);
-} 
-.like:focus {
-    outline: 0;
-    background: rgba(255, 220, 126, 0.4);
-}
-@keyframes likeanim {
+}   
+@keyframes likehover {
     0% { 
         transform: scale(1); 
         box-shadow: 0 0 2px #ffdc7e; 
@@ -294,6 +290,34 @@ figure img {
         opacity: 1;
     }
     70% { 
+        transform: scale(1); 
+        box-shadow: 0 0 22px white, inset 0 0 2px white; 
+        opacity: 1;
+    }
+}
+.like:focus {
+    outline: 0;
+    background: rgba(255, 220, 126, 0.4);
+    animation-name: likeclicked;
+    animation-duration: 0.5s; 
+    animation-iteration-count: 1; 
+    /* animation-timing-function: ease-in; */
+}
+button::-moz-focus-inner {
+    border: 0;
+}
+@keyframes likeclicked {
+    0% { 
+        transform: scale(1); 
+        box-shadow: 0 0 2px #ffdc7e; 
+        opacity: 1;
+    }
+    10% { 
+        transform: scale(1); 
+        box-shadow: 0 0 52px #ffdc7e, inset 0 0 2px #ffdc7e; 
+        opacity: 1;
+    }
+    80% { 
         transform: scale(1); 
         box-shadow: 0 0 22px white, inset 0 0 2px white; 
         opacity: 1;

@@ -88,3 +88,11 @@ window.onclick = function(event) {
   }
 }
 
+// Button focus for firefox
+let like = document.getElementsByClassName("like")[0];
+
+document.addEventListener('click', function (event) {
+  if (event.target.matches('button')) {
+    event.target.focus();
+  }
+})
