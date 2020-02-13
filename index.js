@@ -1,5 +1,4 @@
-// NAV - hide on scroll down
-
+// NAV - HIDE ON SCROLL DOWN
 $(window).scroll(
   // anonymous JS object to store the value
     {
@@ -23,15 +22,67 @@ $(window).scroll(
 });
 
 
-// FOLLOW MODAL
+// SIGNIN MODAL
+let signin = document.getElementById("signinModal");
+let signinBtn = document.getElementsByClassName("signin")[0];
+let exitbtn = document.getElementsByClassName("close")[0];
 
+// Open signin modal
+//  clicking signin button
+signinBtn.onclick = () => {
+  signin.style.display = "block";
+  document.body.style.overflowY = "hidden";
+}
+
+// Close signin modal
+//  clicking <span> (x) 
+exitbtn.onclick = () => {
+  signin.style.display = "none";
+  document.body.style.overflowY = "auto";
+}
+//  pressing esc key
+$(document).keyup( (e) => {
+    if (e.keyCode === 27) {
+        signin.style.display = "none";
+        document.body.style.overflowY = "auto";
+    }
+})
+
+
+// GETSTARTED MODAL
+let getstarted = document.getElementById("getstartedModal");
+let getstartedBtn = document.getElementsByClassName("getstarted")[0];
+let spanbtn = document.getElementsByClassName("close")[1];
+
+// Open signin modal
+//  clicking signin button
+getstartedBtn.onclick = () => {
+  getstarted.style.display = "block";
+  document.body.style.overflowY = "hidden";
+}
+
+// Close signin modal
+//  clicking <span> (x) 
+spanbtn.onclick = () => {
+  getstarted.style.display = "none";
+  document.body.style.overflowY = "auto";
+}
+//  pressing esc key
+$(document).keyup( (e) => {
+    if (e.keyCode === 27) {
+        getstarted.style.display = "none";
+        document.body.style.overflowY = "auto";
+    }
+})
+
+
+// FOLLOW MODAL
 let modal = document.getElementById("followModal");
 let btns = document.getElementsByClassName("follow");
-let xbtn = document.getElementsByClassName("close")[0];
+let xbtn = document.getElementsByClassName("close")[2];
 
-// Open modal: 
-
-//  clicking follow button
+// Open follow modal: 
+//  clicking top or bottom follow button
 Object.entries(btns).map( (obj) => {
     // obj = Array[index, object] (object is the HTML element object). the actual element is stored in obj[1], not object
     obj[1].addEventListener("click", function() {
@@ -40,14 +91,11 @@ Object.entries(btns).map( (obj) => {
     });
 })
 
-// Close modal:
-
-//  clicking <span> (x) 
-xbtn.onclick = function() {
+// Close follow modal:
+xbtn.onclick = () => {
   modal.style.display = "none";
   document.body.style.overflowY = "auto";
 }
-//  pressing esc button on laptop
 $(document).keyup( (e) => {
     if (e.keyCode === 27) {
         modal.style.display = "none";
@@ -57,19 +105,18 @@ $(document).keyup( (e) => {
 
 
 // LIKES MODAL
-
 let likesmodal = document.getElementById("likesModal");
 let btn = document.getElementsByClassName("likes")[0];
-let closebtn = document.getElementsByClassName("close")[1];
+let closebtn = document.getElementsByClassName("close")[3];
 
-// Open
-btn.onclick = function() {
+// Open likes modal:
+btn.onclick = () => {
   likesmodal.style.display = "block";
   document.body.style.overflowY = "hidden";
 }
 
-// Close
-closebtn.onclick = function() {
+// Close likes modal:
+closebtn.onclick = () => {
   likesmodal.style.display = "none";
   document.body.style.overflowY = "auto";
 }
@@ -80,22 +127,29 @@ $(document).keyup( (e) => {
     }
 })
 
-//  clicking outside of the modal for both modals
-window.onclick = function(event) {
-  if (event.target == likesmodal) {
+
+//  clicking outside of the modal for ALL modals
+window.onclick = (e) => {
+  if (e.target == signin) {
+    signin.style.display = "none";
+    document.body.style.overflowY = "auto";
+  } else if (e.target == getstarted) {
+    getstarted.style.display = "none";
+    document.body.style.overflowY = "auto";
+  } else if (e.target == likesmodal) {
     likesmodal.style.display = "none";
     document.body.style.overflowY = "auto";
-  } else if (event.target == modal) {
+  } else if (e.target == modal) {
     modal.style.display = "none";
     document.body.style.overflowY = "auto";
   }
 }
 
-// Button focus for firefox
-let like = document.getElementsByClassName("like")[0];
 
-document.addEventListener('click', function (event) {
-  if (event.target.matches('button')) {
-    event.target.focus();
+// Button focus for firefox css
+let like = document.getElementsByClassName("like")[0];
+document.addEventListener('click', (e) => {
+  if (e.target.matches('button')) {
+    e.target.focus();
   }
 })
