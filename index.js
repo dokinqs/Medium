@@ -22,7 +22,7 @@ $(window).scroll(
 
 // FOLLOW MODAL
 
-let modal = document.getElementById("myModal");
+let modal = document.getElementById("followModal");
 let btns = document.getElementsByClassName("follow");
 let xbtn = document.getElementsByClassName("close")[0];
 
