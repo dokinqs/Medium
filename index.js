@@ -6,15 +6,18 @@ $(window).scroll(
         previousTop: 0
     }, 
     () => {
-      let currentTop = $(window).scrollTop()+ 300;
-      if (currentTop < this.previousTop) {
-        // scrolled up
-          $("#navbar").show();
-          // $("#navbar").slideUp(300);
-      } else {
-        // scrolled down
-          $("#navbar").hide();
-          // $("#navbar").slideDown(300);
+      let currentTop = $(window).scrollTop();
+      let navHeight = 112;
+      if (currentTop > navHeight) {
+        if (currentTop < this.previousTop) {
+            // scrolled up
+            $("#navbar").show();
+            //   $("#navbar").slideDown(300);
+        } else {
+            // scrolled down
+            $("#navbar").hide();
+            //   $("#navbar").slideUp(300);
+        }
       }
       this.previousTop = currentTop;
 });

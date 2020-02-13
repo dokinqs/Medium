@@ -470,7 +470,9 @@ button::-moz-focus-inner {
     padding: 5px 10px;
     font-size: 14px;
 }
-
+#likesModal .showmore {
+    text-align: center;
+}
 
 /* FOOTER */
 
