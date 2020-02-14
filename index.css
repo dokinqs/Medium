@@ -477,6 +477,36 @@ button::-moz-focus-inner {
     text-align: center;
 }
 
+
+/* ARTICLES */
+
+.posts {
+    display: flex;
+    padding: 20px 30px;
+    margin-top: 64px;
+    background: rgba(0, 0, 0, 0.03);
+    align-items: flex-start;
+    flex-direction: row;
+}
+.post-block {
+    width: 33%;
+    margin: 10px;
+}
+h6 {
+    font-weight: 400;
+}
+/* .posts a {
+    display: block;
+} */
+.posts img {
+    width: 100%;
+    height: 220px;
+}
+.post-block div {
+    margin: 10px;
+}
+
+
 /* FOOTER */
 
 .footer {
