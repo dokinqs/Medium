@@ -562,6 +562,19 @@ h6 {
 
 /* Make All Content Under Nav Responsive */
 
+@media screen and (max-width: 933px) {
+    .posts {
+        display: block;
+    }
+    .post-block {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+    } 
+    .post-block img {
+        width: 40%;
+    }
+}
 @media screen and (max-width: 900px) { 
     .aside {
         display: none;
