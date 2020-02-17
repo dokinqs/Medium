@@ -493,13 +493,13 @@ button::-moz-focus-inner {
     margin: 10px;
     font-family: 'Palatino', serif;
 }
+.post-block .side {
+    display: none;
+}
 h6 {
     font-weight: 400;
     color: #666;
 }
-/* .posts a {
-    display: block;
-} */
 .posts img {
     width: 100%;
     height: 220px;
@@ -511,20 +511,19 @@ h6 {
 
 /* FOOTER */
 
-.footer {
+footer {
     background-color: #181818;
     margin-top: 20px;
     padding: 16px;
     height: 60px;
-    /* width: 100%; */
-}
-.footer .homelink {
-    float: left;
 }
 .footer a {
     margin: 0;
 }
-.footer img {
+footer .homelink {
+    float: left;
+}
+footer img {
     width: 46px;
     height: 46px;
     padding: 0;
@@ -575,8 +574,14 @@ h6 {
     .post-block {
         display: flex;
         width: 100%;
-        /* margin: 0; */
     } 
+    .post-block .top {
+        display: none;
+    }
+    .post-block .side {
+        display: block;
+        margin: 0;
+    }
     .post-imgDiv img {
         width: 300px;
         max-width: 100%;
@@ -584,17 +589,12 @@ h6 {
     .post-imgDiv {
         display: flex;
         max-width: 50%;
-        object-fit: fill;
-        /* margin: 0; */
     }
     .post-block .post-textHalf {
         display: block;
         align-items: center;
         width: 50%;
         margin: auto;
-    }
-    .post-block .post-source {
-        margin: 0;
     }
 }
 @media screen and (max-width: 900px) { 
