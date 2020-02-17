@@ -490,7 +490,7 @@ button::-moz-focus-inner {
 }
 .post-block {
     width: 33%;
-    margin: 10px;
+    margin: 0;
     font-family: 'Palatino', serif;
 }
 .post-block .side {
@@ -499,6 +499,7 @@ button::-moz-focus-inner {
 h6 {
     font-weight: 400;
     color: #666;
+    margin-bottom: 10px;
 }
 .posts img {
     width: 100%;
@@ -563,7 +564,7 @@ footer img {
 
 /* Make All Content Under Nav Responsive */
 
-@media screen and (max-width: 933px) {
+@media screen and (min-width: 552px) and (max-width: 933px) {
     h6 {
         margin-top: 0;
     }
@@ -628,6 +629,15 @@ footer img {
         max-width: 190px;
         word-wrap: break-word;
         text-align: left;   
+    }
+}
+@media screen and (max-width: 551px) {
+    .post-block {
+        width: 100%;
+    }
+    .posts {
+        display: flex;
+        flex-direction: column;
     }
 }
 @media screen and (max-width: 520px) { 
