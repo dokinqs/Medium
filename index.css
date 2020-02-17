@@ -491,9 +491,11 @@ button::-moz-focus-inner {
 .post-block {
     width: 33%;
     margin: 10px;
+    font-family: 'Palatino', serif;
 }
 h6 {
     font-weight: 400;
+    color: #666;
 }
 /* .posts a {
     display: block;
@@ -563,16 +565,36 @@ h6 {
 /* Make All Content Under Nav Responsive */
 
 @media screen and (max-width: 933px) {
+    h6 {
+        margin-top: 0;
+    }
     .posts {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
     .post-block {
-        display: block;
+        display: flex;
         width: 100%;
-        margin-bottom: 30px;
+        /* margin: 0; */
     } 
-    .post-block img {
-        width: 40%;
+    .post-imgDiv img {
+        width: 300px;
+        max-width: 100%;
+    }
+    .post-imgDiv {
+        display: flex;
+        max-width: 50%;
+        object-fit: fill;
+        /* margin: 0; */
+    }
+    .post-block .post-textHalf {
+        display: block;
+        align-items: center;
+        width: 50%;
+        margin: auto;
+    }
+    .post-block .post-source {
+        margin: 0;
     }
 }
 @media screen and (max-width: 900px) { 
