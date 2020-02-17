@@ -1,7 +1,7 @@
 /* NAV */
 
 nav {
-    background: rgba(119, 219, 131);
+    background: #83acff;
     top: 0;
     width: 100%;
     z-index: 1;
@@ -204,6 +204,7 @@ article > blockquote {
 figure img {
     height: 500px;
     width: 100%;
+    object-fit: cover;
 }
 
 
@@ -405,6 +406,7 @@ button::-moz-focus-inner {
     margin-bottom: 10px;
 }
 .modal-body button {
+    width: 150px;
     padding: 10px 20px;
     margin: 10px;
     font-size: 12px;
@@ -442,19 +444,16 @@ button::-moz-focus-inner {
     border: 0;
     width: 70%;
     box-shadow: none;
+    margin-bottom: 70px; 
 }
-
 #likesModal .modal-header {
     font-size: 20px;
 }
-
-/* #likesModal .modal-body {
-    display: block;
-} */
 #likesModal .modal-body div {
     height: 70px;
     margin: 10px;
 }
+
 #likesModal .author {
     margin: 20px 0;
 }
@@ -478,7 +477,7 @@ button::-moz-focus-inner {
 }
 
 
-/* ARTICLES */
+/* BOTTOM ARTICLES */
 
 .posts {
     display: flex;
@@ -504,6 +503,7 @@ h6 {
 .posts img {
     width: 100%;
     height: 220px;
+    object-fit: cover;
 }
 .post-block div {
     margin: 10px;
@@ -576,6 +576,7 @@ footer img {
         display: flex;
         width: 100%;
     } 
+    
     .post-block .top {
         display: none;
     }
@@ -583,18 +584,18 @@ footer img {
         display: block;
         margin: 0;
     }
+
+    .post-imgDiv {
+        max-width: 50%;
+    }
     .post-imgDiv img {
         width: 300px;
         max-width: 100%;
     }
-    .post-imgDiv {
-        display: flex;
-        max-width: 50%;
-    }
+
     .post-block .post-textHalf {
-        display: block;
-        align-items: center;
         width: 50%;
+        align-items: center;
         margin: auto;
     }
 }
