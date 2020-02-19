@@ -10,12 +10,12 @@ $(window).scroll(
       if (currentTop > navHeight) {
         if (currentTop < this.previousTop) {
             // scrolled up
-            $("#navbar").show();
-            //   $("#navbar").slideDown(300);
+            // $("#navbar").show();
+            $("#navbar").slideDown(300);
         } else {
             // scrolled down
-            $("#navbar").hide();
-            //   $("#navbar").slideUp(300);
+            // $("#navbar").hide();
+            $("#navbar").slideUp(300);
         }
       }
       this.previousTop = currentTop;
