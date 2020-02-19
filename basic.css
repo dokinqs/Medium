@@ -4,6 +4,10 @@ html, body {
     font-family: 'Lucida Grande', serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 li {
     display: inline;
 }
