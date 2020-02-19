@@ -108,7 +108,9 @@ article {
     display: grid;
     grid-template-columns: 1fr 1fr 10px 740px 10px 1fr 1fr;
     margin-top: 120px;
-
+}
+p:first-of-type {
+    margin-top: 50px;
 }
 article > * {
     grid-column: 4;
@@ -163,18 +165,24 @@ article h2 {
     border-color: black;
     color: black;
 }
+.authorbox div {
+    width: 234px;
+}
 .authorbox div span {
     color: #828282;
 }
 
 .icons {
-    float: right;
+    display: flex;
+    align-items: center;
 }
 .icons a {
     padding: 0;
 }
 .authorIconsContainer {
-    margin-bottom: 40px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .highlight {
@@ -521,7 +529,7 @@ h6 {
     display: none;
 }
 .post-block .authorbox {
-    width: 100%;
+    /* width: 100%; */
     margin-top: 5px;
 }
 
@@ -619,6 +627,7 @@ footer img {
     .aside {
         display: none;
     }
+    
 }
 @media screen and (max-width: 767px) { 
     article {
