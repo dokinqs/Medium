@@ -176,6 +176,49 @@ article h2 {
     display: flex;
     align-items: center;
 }
+
+.tooltip {
+    position: relative;
+    font-family: 'Lucida Grande', sans-serif;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+
+    bottom: 100%;
+    left: 50%;
+    /* left top */
+    margin-left: -133px;
+
+    width: 140px;
+    font-size: 16px;
+    background-color: rgba(131, 172, 255, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    border-radius: 4px;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+
+    bottom: -13px;
+    /* left top */
+    left: 125px;
+
+    pointer-events: none;
+    background-color: rgba(131, 172, 255, 0.8);
+    width: 14px;
+    height: 14px;
+    /* transform: rotate(45deg) translate(-6px, -6px); */
+    clip-path: polygon(50% 50%, 0 0, 100% 0);
+}
+
 .icons a {
     padding: 0;
 }
@@ -621,6 +664,13 @@ footer img {
         width: 50%;
         align-items: center;
         margin: auto;
+    }
+    /* centered */
+    .tooltip .tooltiptext {
+        margin-left: -70px;
+    }
+    .tooltiptext::after {
+        left: 63px;
     }
 }
 @media screen and (max-width: 900px) { 
