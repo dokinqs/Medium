@@ -5,6 +5,11 @@ html, body {
     overflow-x: hidden;
 }
 
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
 * {
     box-sizing: border-box;
 }

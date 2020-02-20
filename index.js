@@ -44,12 +44,14 @@ signinBtn.onclick = () => {
 exitbtn.onclick = () => {
   signin.style.display = "none";
   siteWrapper.style.overflowY = "auto";
+  document.body.style.height = "auto";
 }
 //  pressing esc key
 $(document).keyup( (e) => {
     if (e.keyCode === 27) {
         signin.style.display = "none";
         siteWrapper.style.overflowY = "auto";
+        document.body.style.height = "auto";
     }
 })
 
@@ -72,12 +74,14 @@ getstartedBtn.onclick = () => {
 spanbtn.onclick = () => {
   getstarted.style.display = "none";
   document.body.style.overflowY = "auto";
+  document.body.style.height = "";
 }
 //  pressing esc key
 $(document).keyup( (e) => {
     if (e.keyCode === 27) {
         getstarted.style.display = "none";
         document.body.style.overflowY = "auto";
+        document.body.style.height = "";
     }
 })
 
@@ -102,11 +106,13 @@ Object.entries(btns).map( (obj) => {
 xbtn.onclick = () => {
   modal.style.display = "none";
   document.body.style.overflowY = "auto";
+  document.body.style.height = "";
 }
 $(document).keyup( (e) => {
     if (e.keyCode === 27) {
         modal.style.display = "none";
         document.body.style.overflowY = "auto";
+        document.body.style.height = "";
     }
 })
 
@@ -127,11 +133,13 @@ btn.onclick = () => {
 closebtn.onclick = () => {
   likesmodal.style.display = "none";
   document.body.style.overflowY = "auto";
+  document.body.style.height = "";
 }
 $(document).keyup( (e) => {
     if (e.keyCode === 27) {
         likesmodal.style.display = "none";
         document.body.style.overflowY = "auto";
+        document.body.style.height = "";
     }
 })
 
@@ -141,15 +149,19 @@ window.onclick = (e) => {
   if (e.target == signin) {
     signin.style.display = "none";
     siteWrapper.style.overflowY = "auto";
+    document.body.style.height = "";
   } else if (e.target == getstarted) {
     getstarted.style.display = "none";
     document.body.style.overflowY = "auto";
+    document.body.style.height = "";
   } else if (e.target == likesmodal) {
     likesmodal.style.display = "none";
     document.body.style.overflowY = "auto";
+    document.body.style.height = "";
   } else if (e.target == modal) {
     modal.style.display = "none";
     document.body.style.overflowY = "auto";
+    document.body.style.height = "";
   }
 }
 
