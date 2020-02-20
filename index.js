@@ -8,11 +8,12 @@ $(window).scroll(
       let currentTop = $(window).scrollTop();
       let navHeight = 112;
       if (currentTop > navHeight) {
-        if (currentTop < this.previousTop) {
+        if (currentTop < (this.previousTop-5)) {
             // scrolled up
             // $("#navbar").show();
             $("#navbar").slideDown(300);
-        } else {
+        // } else {
+        } else if (currentTop > (this.previousTop+5)) {
             // scrolled down
             // $("#navbar").hide();
             $("#navbar").slideUp(300);
@@ -26,25 +27,27 @@ $(window).scroll(
 let signin = document.getElementById("signinModal");
 let signinBtn = document.getElementsByClassName("signin")[0];
 let exitbtn = document.getElementsByClassName("close")[0];
+// alternative to document.body
+let siteWrapper = document.getElementById("siteWrapper");
 
 // Open signin modal
 //  clicking signin button
 signinBtn.onclick = () => {
   signin.style.display = "block";
-  document.body.style.overflowY = "hidden";
+  siteWrapper.style.overflowY = "hidden";
 }
 
 // Close signin modal
 //  clicking <span> (x) 
 exitbtn.onclick = () => {
   signin.style.display = "none";
-  document.body.style.overflowY = "auto";
+  siteWrapper.style.overflowY = "auto";
 }
 //  pressing esc key
 $(document).keyup( (e) => {
     if (e.keyCode === 27) {
         signin.style.display = "none";
-        document.body.style.overflowY = "auto";
+        siteWrapper.style.overflowY = "auto";
     }
 })
 
@@ -132,7 +135,7 @@ $(document).keyup( (e) => {
 window.onclick = (e) => {
   if (e.target == signin) {
     signin.style.display = "none";
-    document.body.style.overflowY = "auto";
+    siteWrapper.style.overflowY = "auto";
   } else if (e.target == getstarted) {
     getstarted.style.display = "none";
     document.body.style.overflowY = "auto";
