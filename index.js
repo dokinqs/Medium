@@ -28,14 +28,12 @@ $(window).scroll(
 let signin = document.getElementById("signinModal");
 let signinBtn = document.getElementsByClassName("signin")[0];
 let exitbtn = document.getElementsByClassName("close")[0];
-// alternative to document.body
-let siteWrapper = document.getElementById("siteWrapper");
 
 // Open signin modal
 //  clicking signin button
 signinBtn.onclick = () => {
   signin.style.display = "block";
-  siteWrapper.style.overflowY = "hidden";
+  document.body.style.overflowY = "hidden";
   document.body.style.height = "100%";
 }
 
@@ -43,14 +41,14 @@ signinBtn.onclick = () => {
 //  clicking <span> (x) 
 exitbtn.onclick = () => {
   signin.style.display = "none";
-  siteWrapper.style.overflowY = "auto";
+  document.bodystyle.overflowY = "auto";
   document.body.style.height = "auto";
 }
 //  pressing esc key
 $(document).keyup( (e) => {
     if (e.keyCode === 27) {
         signin.style.display = "none";
-        siteWrapper.style.overflowY = "auto";
+        document.body.style.overflowY = "auto";
         document.body.style.height = "auto";
     }
 })
@@ -148,7 +146,7 @@ $(document).keyup( (e) => {
 window.onclick = (e) => {
   if (e.target == signin) {
     signin.style.display = "none";
-    siteWrapper.style.overflowY = "auto";
+    document.body.style.overflowY = "auto";
     document.body.style.height = "";
   } else if (e.target == getstarted) {
     getstarted.style.display = "none";
