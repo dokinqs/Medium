@@ -8,15 +8,16 @@ $(window).scroll(
       let currentTop = $(window).scrollTop();
       let navHeight = 112;
       if (currentTop > navHeight) {
+        // if (currentTop < this.previousTop) {
         if (currentTop < (this.previousTop-5)) {
-            // scrolled up
-            // $("#navbar").show();
-            $("#navbar").slideDown(300);
-        // } else {
+          // scrolled up
+            $("#navbar").show();
+            // $("#navbar").slideDown(300);
+        // } else if (currentTop > this.previousTop) {
         } else if (currentTop > (this.previousTop+5)) {
-            // scrolled down
-            // $("#navbar").hide();
-            $("#navbar").slideUp(300);
+          // scrolled down
+            $("#navbar").hide();
+            // $("#navbar").slideUp(300);
         }
       }
       this.previousTop = currentTop;
@@ -35,6 +36,7 @@ let siteWrapper = document.getElementById("siteWrapper");
 signinBtn.onclick = () => {
   signin.style.display = "block";
   siteWrapper.style.overflowY = "hidden";
+  document.body.style.height = "100%";
 }
 
 // Close signin modal
@@ -62,6 +64,7 @@ let spanbtn = document.getElementsByClassName("close")[1];
 getstartedBtn.onclick = () => {
   getstarted.style.display = "block";
   document.body.style.overflowY = "hidden";
+  document.body.style.height = "100%";
 }
 
 // Close signin modal
@@ -91,6 +94,7 @@ Object.entries(btns).map( (obj) => {
     obj[1].addEventListener("click", function() {
         modal.style.display = "block";
         document.body.style.overflowY = "hidden";
+        document.body.style.height = "100%";
     });
 })
 
@@ -116,6 +120,7 @@ let closebtn = document.getElementsByClassName("close")[3];
 btn.onclick = () => {
   likesmodal.style.display = "block";
   document.body.style.overflowY = "hidden";
+  document.body.style.height = "100%";
 }
 
 // Close likes modal:
