@@ -751,4 +751,7 @@ footer img {
     .endsocialsContainer .icons {
         display: block;
     }
+    .modal-content {
+        width: 90vw;
+    }
 }
